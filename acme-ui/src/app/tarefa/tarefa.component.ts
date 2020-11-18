@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TarefaService } from './tarefa.service';
 
 @Component({
   selector: 'app-tarefa',
@@ -7,21 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TarefaComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
   /* An empty array that is responsible 
 	to add a division */
-	public items = []; 
-
-	/* A two-way binding performed which 
+  public items = [];
+  
+  /* A two-way binding performed which 
 	pushes text on division */
-	public newTask; 
+  public newTask;
 
+  constructor(private tarefaService: TarefaService) { }
 
-	/* When input is empty, it will 
+  ngOnInit(): void {
+	  this.tarefaService.findAll().subscribe(tarefas => {
+		  console.log(tarefas)
+	  })
+  }
+
+  /* When input is empty, it will 
 	not create a new division */
 	public addToList() { 
 		if (this.newTask == '') { 
@@ -37,5 +40,10 @@ export class TarefaComponent implements OnInit {
 	public deleteTask(index) { 
 		this.items.splice(index, 1); 
 	} 
+
+	 
+
+
+	
 
 }
