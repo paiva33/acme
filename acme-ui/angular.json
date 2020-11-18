@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "acme-ui"
+    }
+  },
+  "defaultProject": "acme-ui",
+  "cli": {
+    "analytics": false
+  }
 }

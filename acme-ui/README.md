@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Referencias 
+https://github.com/eugenp/tutorials/blob/master/spring-boot-modules/spring-boot-angular/src/main/js/application/src/app/user-list/user-list.component.html
+https://www.geeksforgeeks.org/how-to-create-todo-list-in-angular-7/
+https://www.baeldung.com/spring-boot-angular-web
+
