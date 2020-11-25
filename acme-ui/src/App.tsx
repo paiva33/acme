@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'reactstrap';
 import logo from './logo.svg';
 import './App.scss';
 
@@ -10,6 +11,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <Button color="danger">Danger!</Button>
         <a
           className="App-link"
           href="https://reactjs.org"
