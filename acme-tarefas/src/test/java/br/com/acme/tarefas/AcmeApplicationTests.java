@@ -1,10 +1,10 @@
-package com.example.acmetarefas;
+package br.com.acme.tarefas;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class AcmeApplicationTests {
 
 	@Test
 	void contextLoads() {

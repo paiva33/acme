@@ -1,13 +1,17 @@
-package com.example.acmetarefas;
+package br.com.acme.tarefas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * 
+ * @author paiva
+ *
+ */
 @SpringBootApplication
-public class DemoApplication {
+public class AcmeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(AcmeApplication.class, args);
 	}
-
 }
