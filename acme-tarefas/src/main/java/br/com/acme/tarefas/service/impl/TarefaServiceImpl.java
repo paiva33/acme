@@ -38,15 +38,20 @@ public class TarefaServiceImpl implements TarefaService {
 	@Override
 	public void excluir(Long id) {
 		
-		var tarefa = repository.findById(id);
+		var tarefa = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException(""));
 		
-		repository.delete(tarefa.orElseThrow( () -> new ResourceNotFoundException(" Tarefa não encontrada.") ));
+		repository.delete(tarefa);
 		
 	}
 
 	@Override
 	public TarefaSaidaTO atualizar(TarefaEntradaTO entrada) {
-		return null;
+		
+		var entity = repository.findById(entrada.getKey()).orElseThrow(() -> new ResourceNotFoundException(""));
+		
+		entity = repository.save(entity);
+		
+		return mapper.toOutput(entity);
 	}
 
 }
